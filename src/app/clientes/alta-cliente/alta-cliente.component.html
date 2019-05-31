@@ -1,0 +1,32 @@
+<h1>Agregar Usuario</h1>
+<form [formGroup]="Form" novalidate>
+<div class="form-group" [formGroup]="Form" >
+    <label >Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="cliente.nombre" formControlName="nombre">
+    
+  </div>
+  <div class="form-group">
+    <label >Apellido Paterno</label>
+    <input type="text" class="form-control" placeholder="Apellido Paterno" [(ngModel)]="cliente.app" formControlName="app">
+  </div>
+  <div class="form-group">
+    <label >Apellido Materno</label>
+    <input type="text" class="form-control" placeholder="Apellido Materno" [(ngModel)]="cliente.apm" formControlName="apm">
+  </div>
+  <div class="form-group">
+    <label >Sexo</label>
+    <select class="form-control" [(ngModel)]="cliente.sexo" formControlName="sexo">
+      <option value="M">M</option>
+      <option value="F">F</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label >Edad</label>
+    <input type="number" class="form-control" placeholder="Edad" [(ngModel)]="cliente.edad" formControlName="edad">
+  </div>
+  <div class="form-group">
+    <label >Correo</label>
+    <input type="text" class="form-control" placeholder="Correo" [(ngModel)]="cliente.correo" formControlName="correo">
+  </div>
+  <button  class="btn btn-primary" (click)="this.nuevoCliente()" [disabled]="Form.invalid">Guardar</button>
+</form>
